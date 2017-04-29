@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <!-- fitsSystemWindows: hen enabled, the AppBarLayout assumes that the status bar is not available and it has to occupy the entire real estate. -->
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="30dp"
+
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+            <!-- * contentScrim: when collapsing the toolbar color change to this, if you want to use this feature do not set background color for toolBar -->
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_back"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="7dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="parallax"/>
+
+            <!-- * layout_collapseMode: indicate how our tool bar act to collapsing pin on top or paralex -->
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|right"
+        app:srcCompat="@android:drawable/ic_dialog_email"/>
+    <!-- * layout_anchorGravity: layout_gravity should removed so the layout_anchorGravity works -->
+
+
+</android.support.design.widget.CoordinatorLayout>
