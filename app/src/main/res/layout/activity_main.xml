@@ -24,7 +24,6 @@
             <!-- * contentScrim: when collapsing the toolbar color change to this, if you want to use this feature do not set background color for toolBar -->
 
             <ImageView
-                asdasdasd;;kasdj;asd
                 android:id="@+id/image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
