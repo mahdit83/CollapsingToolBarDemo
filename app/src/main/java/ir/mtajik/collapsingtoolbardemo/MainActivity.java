@@ -27,9 +27,6 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle("www.mahditajik.ir");
 
         System.out.println("jenkins test");
-        sdafdfa
-
-                dfs
 
         fillData();
     }
